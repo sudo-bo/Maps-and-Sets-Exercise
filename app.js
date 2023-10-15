@@ -74,7 +74,10 @@ function extractFullName(arrayOfObjects) {
   });
 }
 
+///
+///
 //filter section
+
 function filterByValue(arrayOfObjects, key) {
   return arrayOfObjects.filter(function (object) {
     return object.hasOwnProperty(key);
@@ -115,6 +118,10 @@ function doubleOddNumbers(array) {
     });
 }
 
+///
+///
+// some and every function practice
+
 function hasOddNumber(array) {
   return array.some(function (number) {
     return number % 2 === 0;
@@ -146,4 +153,25 @@ function hasCertainValue(arrayOfObjects, key, value) {
   return arrayOfObjects.every(function (object) {
     return object[key] === value;
   });
+}
+
+///
+///
+// find and findIndex Exercise
+
+function findUserByUserName(arrayOfObjects, name) {
+  return arrayOfObjects.find(function (user) {
+    return user[username] === name;
+  });
+}
+
+function removeUser(arrayOfObjects, name) {
+  const userIndex = arrayOfObjects.findIndex(function (user) {
+    return user["username"] === name;
+  });
+
+  if (userIndex !== -1) {
+    return arrayOfObjects.splice(userIndex, 1);
+  }
+  return;
 }
