@@ -114,3 +114,36 @@ function doubleOddNumbers(array) {
       return value * 2;
     });
 }
+
+function hasOddNumber(array) {
+  return array.some(function (number) {
+    return number % 2 === 0;
+  });
+}
+
+function hasAZero(number) {
+  return number
+    .toString()
+    .split("")
+    .some(function (digit) {
+      return digit === 0;
+    });
+}
+
+function hasNoDuplicates(array) {
+  return array.every(function (element) {
+    return array.indexOf(element) === array.lastIndexOf(element);
+  });
+}
+
+function hasCertainKey(arrayOfObjects, key) {
+  return arrayOfObjects.every(function (object) {
+    return object.hasOwnProperty(key);
+  });
+}
+
+function hasCertainValue(arrayOfObjects, key, value) {
+  return arrayOfObjects.every(function (object) {
+    return object[key] === value;
+  });
+}
