@@ -175,3 +175,52 @@ function removeUser(arrayOfObjects, name) {
   }
   return;
 }
+
+///
+///
+// reduce exercise :)
+
+function extractValue(arrayOfObjects, key) {
+  return arrayOfObjects.reduce(function (accumulatedArray, currentObject) {
+    if (currentObject.hasOwnProperty(key)) {
+      accumulatedArray.push(currentObject[key]);
+    }
+    return accumulatedArray;
+  }, []);
+}
+
+function vowelCount2(string) {
+  newString = string.split("");
+  return newString.reduce(function (accumulatedObject, letter) {
+    if ("aeiou".indexOf(letter.toLowerCase()) !== -1) {
+      if (letter in accumulatedObject) {
+        accumulatedObject[letter]++;
+      } else {
+        accumulatedObject[letter] = 1;
+      }
+    }
+    return accumulatedObject;
+  }, {});
+}
+
+function addKeyAndValue2(arrayOfObjects, key, value) {
+  return arrayOfObjects.reduce(function (accumulatedArray, currentObject) {
+    currentObject[key] = value;
+    accumulatedArray.push(currentObject);
+    return accumulatedArray;
+  }, []);
+}
+
+function partition(array, callback) {
+  return array.reduce(
+    function (accumulatedArray, currentElement) {
+      if (callback(currentElement)) {
+        accumulatedArray[0].push(currentElement);
+      } else {
+        accumulatedArray[1].push(currentElement);
+      }
+      return accumulatedArray;
+    },
+    [[], []]
+  );
+}
