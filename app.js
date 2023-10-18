@@ -224,3 +224,12 @@ function partition(array, callback) {
     [[], []]
   );
 }
+
+///
+// let and const exercise
+// ---------------------------------------------------
+// -use const PI = 3.15 in the ES2015 version
+// -var is a global handler, let is at the block level
+// -var is a global handler, and const, like let, is at the block level
+// -let lets you ressign the value of the variable (not redeclare it), but const does not
+// -hoisting is the way the compiler(i think...) arranges the variable declarations
