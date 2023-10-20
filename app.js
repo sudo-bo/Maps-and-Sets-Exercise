@@ -233,3 +233,16 @@ function partition(array, callback) {
 // -var is a global handler, and const, like let, is at the block level
 // -let lets you ressign the value of the variable (not redeclare it), but const does not
 // -hoisting is the way the compiler(i think...) arranges the variable declarations
+
+///
+// arrow functions exercise
+// ---------------------------------------------------
+const double = (arr) => arr.map((val) => val * 2);
+
+const squareAndFindEvens = (numbers) => {
+  var squares = numbers.map((num) => num ** 2);
+  var evens = squares.filter((square) => square % 2 === 0);
+  return evens;
+};
+
+// it's  impressive how this can be even shorter. i think it may be jarring to see for people coming from other languages
