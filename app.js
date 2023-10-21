@@ -246,3 +246,22 @@ const squareAndFindEvens = (numbers) => {
 };
 
 // it's  impressive how this can be even shorter. i think it may be jarring to see for people coming from other languages
+
+///
+// Rest / Spread Operator Exercises
+// ---------------------------------------------------
+
+const filterOutOdds = (...elements) => elements.filter((num) => num % 2 === 0);
+// i like arrow functions, but i don't like the denseness the one-liners bring.
+
+const findMin = (...elements) =>
+  elements.reduce((min, currentVal) => Math.min(min, currentVal));
+
+function mergeObjects(obj, obj2) {
+  return { ...obj, ...obj2 };
+}
+
+const doubleAndReturnArgs = (array, ...numbers) => [
+  ...array,
+  ...numbers.map((value) => value * 2),
+];
