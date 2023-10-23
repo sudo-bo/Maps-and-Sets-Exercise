@@ -300,3 +300,56 @@ function createAnimal(species, verb, noise) {
     },
   };
 }
+
+///
+//  Destructuring Exercise
+// ---------------------------------------------------
+// 1
+// 8, 1846
+
+// 2
+// [1846, 1659]
+
+// 3
+// Your name is Alejandro and you like purple
+// Your name is Melissa and you like green
+// Your name is undefined and you like green
+
+// array - 1
+// Maya
+// Marisa
+// Chi
+
+// array - 2
+// Raindrops on roses
+// whiskers on kittens
+// ["Bright copper kettles", "warm woolen mittens", "Brown paper packages tied up with strings"]
+
+// array - 3
+// [ 10, 30, 20 ]
+
+// es 2015 refactoring
+// const obj = {
+//     numbers: {
+//       a: 1,
+//       b: 2
+//     }
+//   };
+
+//   let {numbers: {a}} = obj;
+//   let {numbers: {b}} = obj;
+
+// es2015 one line array swap with destructuring
+
+// const arr = [1, 2];
+// [arr[1],arr[0]] = [arr[0],arr[1]]
+
+// raceResults function
+function raceResults([first, second, third, ...rest]) {
+  return {
+    first,
+    second,
+    third,
+    rest,
+  };
+}
