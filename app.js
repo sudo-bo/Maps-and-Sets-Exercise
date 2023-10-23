@@ -353,3 +353,35 @@ function raceResults([first, second, third, ...rest]) {
     rest,
   };
 }
+
+///
+//  Maps and Sets Exercise
+// ---------------------------------------------------
+// 1.
+[1, 2, 3, 4];
+
+2;
+("ref");
+
+3;
+m = ([1, 2, 3], false);
+
+function hasDuplicate(array) {
+  let shortenedArray = new Set(array);
+  return array.length > shortenedArray.size;
+}
+
+function vowelCount3(string) {
+  let stringMap = new Map();
+  for (char of string) {
+    if ("aeiou".indexOf(char) !== -1) {
+      if (stringMap.has(char)) {
+        let currentValue = stringMap.get(char);
+        stringMap.set(char, currentValue + 1);
+      } else {
+        stringMap.set(char, 1);
+      }
+    }
+  }
+  return stringMap;
+}
